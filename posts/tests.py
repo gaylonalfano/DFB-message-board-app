@@ -19,6 +19,7 @@ class PostModelTest(TestCase):
 # Test homepage exists, it uses the home view, and uses home.html template
 class HomePageViewTest(TestCase):
     def setUp(self):
+        """Allows us to run subsequent tests"""
         Post.objects.create(text='this is another test')
 
     def test_view_url_exists_at_proper_location(self):
